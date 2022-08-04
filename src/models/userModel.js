@@ -39,8 +39,8 @@ class User {
         if (!validator.isEmail(this.body.email)) this.errors.push('Invalid e-mail address!');
 
         // Password must be between 3 and 50 chars
-        if (this.body.password.length < 3 || this.body.password.length > 50) {
-            this.errors.push('Your password needs to be between 3 and 50 characters long!');
+        if (this.body.password.length < 6 || this.body.password.length > 20) {
+            this.errors.push('Your password needs to be between 6 and 20 characters long!');
         }
     }
 

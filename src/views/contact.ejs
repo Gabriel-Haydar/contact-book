@@ -14,24 +14,24 @@
         <% if (contact._id) { %>
           <form action="/contact/edit/<%= contact._id %>" method="POST">
         <% } else { %>
-          <form action="/contact/register" method="POST">
+          <form action="/contact/register" method="POST" class="contact">
         <% } %>
             <input type="hidden" name="_csrf" value=<%= csrfToken %>>
               <div class="mb-3">
-                <label class="form-label">First name</label>
-                <input value="<%= contact.firstName %>" type="text" class="form-control" name="firstName">
+                <label class="form-label first-name">First name</label>
+                <input value="<%= contact.firstName %>" type="text" class="form-control first-name" name="firstName">
               </div>
               <div class="mb-3">
-                <label class="form-label">Last name</label>
-                <input value="<%= contact.lastName %>" type="text" class="form-control" name="lastName">
+                <label class="form-label last-name">Last name</label>
+                <input value="<%= contact.lastName %>" type="text" class="form-control last-name" name="lastName">
               </div>
               <div class="mb-3">
-                <label class="form-label">Email address</label>
-                <input value="<%= contact.email %>" type="email" class="form-control" name="email">
+                <label class="form-label email">Email address</label>
+                <input value="<%= contact.email %>" type="email" class="form-control email" name="email">
               </div>
               <div class="mb-3">
-                <label class="form-label">Phone number</label>
-                <input value="<%= contact.phone %>" type="tel" class="form-control" name="phone">
+                <label class="form-label phone">Phone number</label>
+                <input value="<%= contact.phone %>" type="tel" class="form-control phone" name="phone">
               </div>
               <button type="submit" class="btn btn-primary">Save</button>
           </form>
