@@ -46,7 +46,7 @@ app.use(checkCsrfError);
 app.use(csrfTokenLocalVar);
 app.use(routes);
 
-const PORT = 8080;
+const PORT = 3000;
 app.on('ready', () => {
     app.listen(PORT, () => {
         console.log('Access through http://localhost:' + PORT.toString());
