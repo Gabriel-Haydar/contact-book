@@ -43,10 +43,10 @@ exports.update = async (req, res) => {
     if(!req.params.id) return res.render('error404');
     try {
         const contact = new Contact(req.body);
-        contact.update(req.params.id);
+        await contact.update(req.params.id);
 
         if (contact.errors.length > 0) {
-            req.flash('errors', newContact.errors);
+            req.flash('errors', contact.errors);
             req.session.save(() => res.redirect('back'));
             return;
         }

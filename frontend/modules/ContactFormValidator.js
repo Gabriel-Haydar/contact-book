@@ -55,7 +55,7 @@ export default class ContactFormValidator {
             return;
         }
         // Validating e-mail address
-        if (!validator.isEmail(emailInput.value)) {
+        if (emailInput.value && !validator.isEmail(emailInput.value)) {
             const errorMsg = document.createTextNode('Invalid e-mail address!');
             const p = this.createErrorP(errorMsg);
             emailInput.after(p);
